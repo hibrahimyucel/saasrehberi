@@ -15,8 +15,9 @@ Desktop.ini
 # Node / package managers
 # -------------------------
 # Ignore node_modules anywhere in the repo
-**/node_modules/
 node_modules/
+**/node_modules/
+
 
 # pnpm store/cache (usually global, do not commit)
 .pnpm-store/
