@@ -1,2 +1,2 @@
-# Monorepo Kılavuz İş Listesi
+# Monorepo İş Listesi
 

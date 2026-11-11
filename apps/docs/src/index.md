@@ -1,1 +1,1 @@
-# Merhaba Monorepo Dökümantasyonu
+# Monorepo Dökümantasyonu

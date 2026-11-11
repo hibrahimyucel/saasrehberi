@@ -19,7 +19,8 @@ Desktop.ini
 
 node_modules/
 **/node_modules/
-
+**/cache/**
+**/.cache/**
 
 # pnpm store/cache (usually global, do not commit)
 .pnpm-store/
