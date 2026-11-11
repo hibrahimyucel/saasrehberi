@@ -5,10 +5,12 @@ services:
     ports:
       - "80:80"
       - "443:443"
-    # 
+
     volumes:
-      - ./nginx/test.conf:/etc/nginx/nginx.conf:ro
+      - ./nginx/dev.conf:/etc/nginx/nginx.conf:ro
       - ./nginx/certs:/etc/nginx/certs:ro
+      - /home/iyucel/saasguide/apps/docs/src/.vitepress/dist:/var/www/vitepress_static:ro,z
+
     networks:
       - dev_network
     deploy:
