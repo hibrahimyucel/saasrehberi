@@ -1,16 +1,24 @@
 services:
   nginx_proxy:
     image: nginx:alpine
-    container_name: nginx_proxy
+    container_name: sr_proxy
     ports:
       - "80:80"
       - "443:443"
+    # 
     volumes:
-      # Relative to this specific gateway folder
       - ./nginx/test.conf:/etc/nginx/nginx.conf:ro
       - ./nginx/certs:/etc/nginx/certs:ro
     networks:
       - dev_network
+    deploy:
+      resources:
+        limits:
+          cpus: '1.0'        # Maksimum kullanabileceği CPU çekirdek sayısı
+          memory: 512M       # Maksimum kullanabileceği RAM miktarı
+        reservations:
+          cpus: '0.25'       # Servis için ayrılan / garanti edilen minimum CPU
+          memory: 128M       # Servis için ayrılan / garanti edilen minimum RAM
 
 networks:
   dev_network:
